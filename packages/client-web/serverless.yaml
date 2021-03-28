@@ -1,0 +1,9 @@
+client-web:
+  component: "@sls-next/serverless-component@1.18.0"
+  inputs:
+    build:
+      cmd: yarn
+      args:
+        - workspace
+        - "@app/client-web"
+        - build

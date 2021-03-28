@@ -27,6 +27,7 @@
   "scripts": {
     "dev": "yarn workspace @app/client-web dev",
     "build": "yarn workspace @app/client-web build",
+    "deploy": "yarn workspace @app/client-web deploy",
     "cleanup": "yarn workspace @app/client-web cleanup",
     "lint": "eslint {packages,libs}/**/*.{ts,tsx}",
     "test": "jest --maxWorkers=1",

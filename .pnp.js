@@ -90,6 +90,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@material-ui/icons", "virtual:0f6b7972d7283ebbae009c999090c56aae1c5722aa8f1c15856a00dd562334187914ebb64811a3f51bdd8d2f109239075c5f99a56050f0917223d61d77b343e8#npm:4.11.2"],
             ["@material-ui/styles", "virtual:0f6b7972d7283ebbae009c999090c56aae1c5722aa8f1c15856a00dd562334187914ebb64811a3f51bdd8d2f109239075c5f99a56050f0917223d61d77b343e8#npm:4.11.3"],
             ["@next/bundle-analyzer", "npm:10.0.9"],
+            ["@next/env", "npm:10.0.9"],
             ["@types/node", "npm:14.14.37"],
             ["@types/ramda", "https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90"],
             ["@types/react", "npm:17.0.3"],

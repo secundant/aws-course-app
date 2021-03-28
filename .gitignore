@@ -3,16 +3,19 @@
 
 # production
 build
-.serverless
 
 # build
 
 **/.next/
+.serverless
+.serverless_nextjs
+packages/client-web/out
 
 # misc
 .DS_Store
 /.idea
 .vscode
+node_modules
 
 *.log
 
