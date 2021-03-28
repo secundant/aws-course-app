@@ -1,63 +1,47 @@
 {
-  "name": "store",
-  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "formik": "^2.1.5",
-    "formik-material-ui": "^2.0.1",
-    "yup": "^0.29.1",
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.43",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-router-dom": "^5.1.5",
-    "@types/yup": "^0.29.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2",
-    "@reduxjs/toolkit": "^1.2.5",
-    "react-redux": "^7.2.0",
-    "@types/react-redux": "^7.1.7",
-    "@types/lodash": "^4.14.158",
-    "lodash": "^4.17.19",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4"
-  },
+  "name": "aws-course-app",
+  "version": "0.0.1",
+  "description": "Monorepo",
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0"
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-sonarjs": "^0.6.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "jest-circus": "^26.6.3",
+    "jest-sonar-reporter": "^2.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "scripts": {
+    "dev": "yarn workspace @app/client-web dev",
+    "build": "yarn workspace @app/client-web build",
+    "cleanup": "yarn workspace @app/client-web cleanup",
+    "lint": "eslint {packages,libs}/**/*.{ts,tsx}",
+    "test": "jest --maxWorkers=1",
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\""
   },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "libs/*"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "git rev-parse -q --no-revs --verify MERGE_HEAD || lint-staged",
+      "pre-push": "yarn workspace @app/client-web analyze"
+    }
   }
 }

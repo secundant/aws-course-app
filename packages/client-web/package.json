@@ -1,0 +1,37 @@
+{
+  "name": "@app/client-web",
+  "version": "0.0.1",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.3",
+    "axios": "^0.21.1",
+    "core-js": "^3.9.1",
+    "next": "^10.0.9",
+    "ramda": "^0.27.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.1",
+    "swr": "^0.5.4"
+  },
+  "devDependencies": {
+    "@lib/next-transpile-pnp-workspace": "workspace:*",
+    "@next/bundle-analyzer": "^10.0.9",
+    "@types/node": "^14.14.37",
+    "@types/ramda": "https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/styled-components": "^5.1.9",
+    "next-compose-plugins": "^2.2.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.3"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cleanup": "yarn dlx rimraf .next",
+    "analyze": "yarn analyze:typescript",
+    "analyze:typescript": "tsc --noEmit -p tsconfig.json"
+  }
+}

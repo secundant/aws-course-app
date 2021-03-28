@@ -1,0 +1,9 @@
+{
+  "*.{ts,tsx}": [
+    "eslint --fix",
+    "prettier --parser typescript --write"
+  ],
+  "*.{json,js,graphql}": [
+    "prettier --write"
+  ]
+}

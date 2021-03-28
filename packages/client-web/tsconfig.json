@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["dom", "esnext"],
+    "types": ["node"],
+    "jsx": "preserve",
+    "allowJs": true,
+    "noEmit": true,
+    "strictPropertyInitialization": false
+  },
+  "plugins": [
+    {
+      "name": "typescript-styled-plugin"
+    }
+  ],
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
