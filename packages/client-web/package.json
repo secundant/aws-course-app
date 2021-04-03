@@ -17,6 +17,7 @@
   "devDependencies": {
     "@lib/next-transpile-pnp-workspace": "workspace:*",
     "@next/bundle-analyzer": "^10.0.9",
+    "@next/env": "^10.0.9",
     "@types/node": "^14.14.37",
     "@types/ramda": "https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90",
     "@types/react": "^17.0.3",
@@ -30,7 +31,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cleanup": "yarn dlx rimraf .next",
+    "deploy": "yarn dlx serverless",
+    "cleanup": "yarn dlx rimraf .next .serverless .serverless_nextjs",
     "analyze": "yarn analyze:typescript",
     "analyze:typescript": "tsc --noEmit -p tsconfig.json"
   }

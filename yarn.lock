@@ -14,6 +14,7 @@ __metadata:
     "@material-ui/icons": ^4.11.2
     "@material-ui/styles": ^4.11.3
     "@next/bundle-analyzer": ^10.0.9
+    "@next/env": ^10.0.9
     "@types/node": ^14.14.37
     "@types/ramda": "https://github.com/types/npm-ramda.git#commit=9529aa3c8ff70ff84afcbc0be83443c00f30ea90"
     "@types/react": ^17.0.3
@@ -1010,7 +1011,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:10.0.9":
+"@next/env@npm:10.0.9, @next/env@npm:^10.0.9":
   version: 10.0.9
   resolution: "@next/env@npm:10.0.9"
   checksum: a41735627f35db20f4a3804c6caa22edd01f3cfdf071e0e70ddec2007c42cc5987cbad9c5f7bd9a9410e721b60b0719f958a764f25864ce61b2684a714d981e0

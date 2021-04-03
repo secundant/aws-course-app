@@ -25,6 +25,7 @@ module.exports = withPlugins(
     })
   ],
   {
+    target: 'serverless',
     reactStrictMode: configuration.build.react.enableStrictMode,
     /**
      * @see https://nextjs.org/docs/api-reference/next.config.js/configuring-onDemandEntries
