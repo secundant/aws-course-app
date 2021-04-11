@@ -13,7 +13,6 @@ export const PageMetadataProvider = memo(
   ({ children, PageComponent }: PageMetadataProviderProps) => {
     const metadata = useMemo(() => getPageMetadata(PageComponent), [PageComponent]);
 
-    console.log('METADATA::', metadata);
     const decoratedChildren = useMemo(
       () => metadata.entries.reduceRight(metadataReducer, children),
       [metadata, children]

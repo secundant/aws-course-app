@@ -5,11 +5,12 @@ import { PageHead } from '@app/client-web/components/common/Page/Head';
 import { Products } from '@app/client-web/components/Products';
 import { ProductsPageFacadeContext } from '@app/client-web/contexts/products/products-page-facade.context';
 import { ProductsPageFacadeImpl } from '@app/client-web/domain/facades/products-page/products-page.facade.impl';
+import { ApiGatewayHttpClientImpl } from '@app/client-web/infrastructure/http-client/api-gateway.http-client.impl';
 import { ProductsRepositoryImpl } from '@app/client-web/infrastructure/repositories/products/products.repository.impl';
 
 export default withDefaultPage(function IndexPage(): ReactElement {
   const productsPageFacade = useMemo(
-    () => new ProductsPageFacadeImpl(new ProductsRepositoryImpl()),
+    () => new ProductsPageFacadeImpl(new ProductsRepositoryImpl(new ApiGatewayHttpClientImpl())),
     []
   );
 
