@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "ea48cef4-4605-4e03-a608-487278e176af",
+      "price": 41,
+      "title": "Product #0",
+      "description": "Description for #0"
+    },
+    {
+      "id": "464f3fc0-43aa-474f-981f-4353db0937e5",
+      "price": 44,
+      "title": "Product #1",
+      "description": "Description for #1"
+    },
+    {
+      "id": "0c44d9b2-5adb-4a3d-8cd4-033d8d9bca4a",
+      "price": 46,
+      "title": "Product #2",
+      "description": "Description for #2"
+    },
+    {
+      "id": "2e9a39d5-3080-4816-bea6-55c619d5bb80",
+      "price": 47,
+      "title": "Product #3",
+      "description": "Description for #3"
+    },
+    {
+      "id": "75ad44a8-c04e-46b2-9c57-b1fd55aa14b7",
+      "price": 41,
+      "title": "Product #4",
+      "description": "Description for #4"
+    },
+    {
+      "id": "b226f3b6-4983-4fcd-9569-66e2069d809e",
+      "price": 46,
+      "title": "Product #5",
+      "description": "Description for #5"
+    },
+    {
+      "id": "e704dd93-e00c-40de-bc84-e7ce71d653a1",
+      "price": 45,
+      "title": "Product #6",
+      "description": "Description for #6"
+    },
+    {
+      "id": "e7b524c2-5504-4260-950b-f095a8ecbb5c",
+      "price": 410,
+      "title": "Product #7",
+      "description": "Description for #7"
+    },
+    {
+      "id": "2f6abaaa-01db-4afe-987c-56509d77826f",
+      "price": 42,
+      "title": "Product #8",
+      "description": "Description for #8"
+    },
+    {
+      "id": "bdd479d0-b9ed-4697-bb52-d4ae23989d20",
+      "price": 44,
+      "title": "Product #9",
+      "description": "Description for #9"
+    }
+  ]
+}
