@@ -1,0 +1,46 @@
+service: 'products-service'
+frameworkVersion: '2'
+
+custom:
+  serverless-offline:
+    httpPort: 3000
+    babelOptions:
+      presets:
+        - env
+
+package:
+  individually: true
+
+plugins:
+  - "@libs/serverless-builder"
+  - serverless-offline
+
+provider:
+  name: 'aws'
+  runtime: 'nodejs12.x'
+  apiGateway:
+    shouldStartNameWithService: true
+    minimumCompressionSize: 1024
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+
+functions:
+  getProductList:
+    handler: 'application/handlers.getProducts'
+    events:
+      - http:
+          method: 'get'
+          path: 'products'
+          cors: true
+
+  getProductById:
+    handler: 'application/handlers.getProductById'
+    events:
+      - http:
+          method: 'get'
+          path: 'product/{productId}'
+          cors: true
+          request:
+            parameters:
+              paths:
+                productId: true

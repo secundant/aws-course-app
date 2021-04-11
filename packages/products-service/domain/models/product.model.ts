@@ -1,0 +1,7 @@
+// TODO Convert to class
+export interface ProductModel {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+}
